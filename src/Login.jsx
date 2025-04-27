@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const BASE_URL = 'https://todo-backend-1-rnal.onrender.com';
+
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleLogin = () => {
-    axios.post('http://localhost:3001/login', {
+    axios.post(`${BASE_URL}/login`, {
       email: email.trim().toLowerCase(),
       password: password
     })

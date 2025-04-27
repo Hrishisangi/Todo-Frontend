@@ -3,23 +3,25 @@ import Create from './Create';
 import axios from 'axios';
 import { BsCircleFill, BsFillCheckCircleFill, BsFillTrashFill } from 'react-icons/bs';
 
+const BASE_URL = 'https://todo-backend-1-rnal.onrender.com';
+
 function Home() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/get')
+    axios.get(`${BASE_URL}/get`)
       .then(result => setTodos(result.data))
       .catch(err => console.log(err));
   }, []);
 
   const handleEdit = (id) => {
-    axios.put(`http://localhost:3001/update/${id}`)
+    axios.put(`${BASE_URL}/update/${id}`)
       .then(() => window.location.reload())
       .catch(err => console.log(err));
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`)
+    axios.delete(`${BASE_URL}/delete/${id}`)
       .then(() => window.location.reload())
       .catch(err => console.log(err));
   };
@@ -33,7 +35,6 @@ function Home() {
     <div className='home'>
       <h1>TO-DO LIST</h1>
 
-      
       <div className="logout_container">
         <button className="logout_button" onClick={handleLogout}>Logout</button>
       </div>
