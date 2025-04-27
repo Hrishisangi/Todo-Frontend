@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "todolist",
   "private": true,
   "version": "0.0.0",
@@ -25,5 +26,25 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
+=======
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1",
+    "node-input-validator": "^4.5.1",
+    "nodemon": "^3.1.9"
+>>>>>>> d95b986f04a88157f9c8185eed92b0c0c6ed66be
   }
 }
